@@ -14,6 +14,9 @@ commands:
   submit:
     description: This is the submit command
     permission: abmcjudge.command.submit
+  mkjudge:
+    description: This is the make judge command
+    permission: abmcjudge.command.admin.makejudge
 permissions:
   abmcjudge.command.judge:
     description: Allows the user to open the Judge gui
@@ -21,6 +24,6 @@ permissions:
   abmcjudge.command.submit:
     description: Allows the user to open the Submit gui
     default: true
-  abmcjudge.command.makejudge:
+  abmcjudge.command.admin.makejudge:
     description: Allows the user to make another user Judge rank
     default: op

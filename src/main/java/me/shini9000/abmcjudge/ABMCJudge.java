@@ -1,6 +1,7 @@
 package me.shini9000.abmcjudge;
 
 import me.shini9000.abmcjudge.commands.JudgeCommand;
+import me.shini9000.abmcjudge.commands.MakeJudge;
 import me.shini9000.abmcjudge.commands.SubmitCommand;
 import me.shini9000.abmcjudge.utils.PlayerMenuUtil;
 import net.luckperms.api.LuckPerms;
@@ -24,6 +25,7 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
         //saveDefaultConfig();
         getCommand("judge").setExecutor(new JudgeCommand());
         getCommand("submit").setExecutor(new SubmitCommand());
+        getCommand("mkjudge").setExecutor(new MakeJudge());
 
         Bukkit.getConsoleSender().sendMessage("Plugin " + getPluginMeta().getName() + " loaded");
 
