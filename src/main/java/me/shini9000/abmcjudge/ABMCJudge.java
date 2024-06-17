@@ -1,5 +1,7 @@
 package me.shini9000.abmcjudge;
 
+import me.shini9000.abmcjudge.commands.JudgeCommand;
+import me.shini9000.abmcjudge.commands.SubmitCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,6 +14,8 @@ public final class ABMCJudge extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("Plugin version: " + getPluginMeta().getVersion());
         saveDefaultConfig();
 
+        new JudgeCommand();
+        new SubmitCommand();
 
         Bukkit.getConsoleSender().sendMessage("Plugin " + getPluginMeta().getName() + " loaded");
 
