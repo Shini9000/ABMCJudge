@@ -7,3 +7,20 @@ depend: [PlotSquared, LuckPerms]
 authors: [Shini9000]
 description: A creative rank system for ABMC server. Uses luckperms and plotsquared
 website: https://github.com/Shini9000
+commands:
+  judge:
+    description: This is the judge command
+    permission: abmcjudge.command.judge
+  submit:
+    description: This is the submit command
+    permission: abmcjudge.command.submit
+permissions:
+  abmcjudge.command.judge:
+    description: Allows the user to open the Judge gui
+    default: false
+  abmcjudge.command.submit:
+    description: Allows the user to open the Submit gui
+    default: true
+  abmcjudge.command.makejudge:
+    description: Allows the user to make another user Judge rank
+    default: op
