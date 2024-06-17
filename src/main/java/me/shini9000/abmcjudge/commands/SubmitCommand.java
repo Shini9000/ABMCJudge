@@ -1,5 +1,6 @@
 package me.shini9000.abmcjudge.commands;
 
+import me.shini9000.abmcjudge.ABMCJudge;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SubmitCommand implements CommandExecutor {
+    private ABMCJudge plugin;
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] strings) {
