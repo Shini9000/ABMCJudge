@@ -1,0 +1,9 @@
+name: ABMCJudge
+version: '${version}'
+main: me.shini9000.abmcjudge.ABMCJudge
+api-version: '1.20'
+load: STARTUP
+depend: [PlotSquared, LuckPerms]
+authors: [Shini9000]
+description: A creative rank system for ABMC server. Uses luckperms and plotsquared
+website: https://github.com/Shini9000
