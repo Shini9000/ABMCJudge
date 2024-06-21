@@ -20,7 +20,7 @@ commands:
 permissions:
   abmcjudge.command.judge:
     description: Allows the user to open the Judge gui
-    default: false
+    default: op
   abmcjudge.command.submit:
     description: Allows the user to open the Submit gui
     default: true
