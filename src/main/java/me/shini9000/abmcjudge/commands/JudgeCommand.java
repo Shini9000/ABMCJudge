@@ -1,6 +1,8 @@
 package me.shini9000.abmcjudge.commands;
 
 import me.shini9000.abmcjudge.ABMCJudge;
+import me.shini9000.abmcjudge.SQL.MySQL;
+import me.shini9000.abmcjudge.menus.JudgeMenus.JudgeMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -19,12 +21,16 @@ public class JudgeCommand implements CommandExecutor {
             return true;
         }
 
-        if (sender instanceof Player) {
-            Player p = (Player) sender;
+        Player p = (Player) sender;
+        String perm = "abmcjudge.command.judge";
+        if (!(p.hasPermission("abmcjudge.command.judge"))) {
+            p.sendMessage(ChatColor.RED + "You dont have the permission " + perm);
+
+        } else{
+            (new JudgeMenu(ABMCJudge.getPlayerMenuUtil(p))).open();
             p.sendMessage("Judge Test success");
-
-
         }
+
         return true;
     }
 }
