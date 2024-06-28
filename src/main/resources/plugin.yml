@@ -17,6 +17,14 @@ commands:
   mkjudge:
     description: This is the make judge command
     permission: abmcjudge.command.admin.makejudge
+  ptitle:
+    description: Edit your plot title.
+  plore:
+    description: Edit your plot lore.
+  pinfo:
+    description: A judge command to check the plot overview of other plots.
+  pcomment:
+    description: Write a comment for a plot(for judges).
 permissions:
   abmcjudge.command.judge:
     description: Allows the user to open the Judge gui

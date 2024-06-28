@@ -11,6 +11,11 @@ import org.bukkit.entity.Player;
 public class MakeJudge implements CommandExecutor {
     private ABMCJudge plugin;
 
+    public MakeJudge(ABMCJudge plugin) {
+        this.plugin = plugin;
+        plugin.getCommand("mkjudge").setExecutor(this);
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         Player p = (Player) sender;

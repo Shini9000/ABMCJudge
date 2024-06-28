@@ -28,15 +28,17 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
         Bukkit.getConsoleSender().sendMessage("Version: 2.4.8");
         getConfig().options().copyDefaults();
         saveDefaultConfig();
-        getCommand("submit").setExecutor(new SubmitCommand());
-        getCommand("mkjudge").setExecutor(new MakeJudge());
-        getCommand("judge").setExecutor(new JudgeCommand());
+//        getCommand("submit").setExecutor(new SubmitCommand());
+//        getCommand("mkjudge").setExecutor(new MakeJudge());
+//        getCommand("judge").setExecutor(new JudgeCommand());
+        new MakeJudge(this);
+        new SubmitCommand(this);
+        new JudgeCommand(this);
         new SetPlotTitle(this);
         new SetPlotLore(this);
         new SetPlotComment(this);
         new MenuListener(this);
         new LPUtils(this.luckPerms);
-        getCommand("judge").setExecutor(new JudgeCommand());
         this.SQL = new MySQL();
         this.data = new SQLCreate(this);
         try {

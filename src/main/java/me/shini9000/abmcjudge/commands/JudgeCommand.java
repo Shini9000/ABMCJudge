@@ -13,6 +13,11 @@ import org.bukkit.entity.Player;
 public class JudgeCommand implements CommandExecutor {
     private ABMCJudge plugin;
 
+    public JudgeCommand(ABMCJudge plugin) {
+        this.plugin = plugin;
+        plugin.getCommand("judge").setExecutor(this);
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] strings) {
 
@@ -23,7 +28,7 @@ public class JudgeCommand implements CommandExecutor {
 
         Player p = (Player) sender;
         String perm = "abmcjudge.command.judge";
-        if (!(p.hasPermission("abmcjudge.command.judge"))) {
+        if (!(p.hasPermission(perm))) {
             p.sendMessage(ChatColor.RED + "You dont have the permission " + perm);
 
         } else{
