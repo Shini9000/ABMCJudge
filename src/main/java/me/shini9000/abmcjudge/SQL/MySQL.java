@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import org.bukkit.Bukkit;
 
 public class MySQL {
-    private final String hostname = Bukkit.getServer().getPluginManager().getPlugin("KSJudge").getConfig().getString("hostname");
+    private final String hostname = Bukkit.getServer().getPluginManager().getPlugin("ABMCJudge").getConfig().getString("hostname");
 
-    private final String port = Bukkit.getServer().getPluginManager().getPlugin("KSJudge").getConfig().getString("port");
+    private final String port = Bukkit.getServer().getPluginManager().getPlugin("ABMCJudge").getConfig().getString("port");
 
-    private final String database = Bukkit.getServer().getPluginManager().getPlugin("KSJudge").getConfig().getString("database");
+    private final String database = Bukkit.getServer().getPluginManager().getPlugin("ABMCJudge").getConfig().getString("database");
 
-    private final String user = Bukkit.getServer().getPluginManager().getPlugin("KSJudge").getConfig().getString("user");
+    private final String user = Bukkit.getServer().getPluginManager().getPlugin("ABMCJudge").getConfig().getString("user");
 
-    private final String password = Bukkit.getServer().getPluginManager().getPlugin("KSJudge").getConfig().getString("password");
+    private final String password = Bukkit.getServer().getPluginManager().getPlugin("ABMCJudge").getConfig().getString("password");
 
     private Connection connection;
 

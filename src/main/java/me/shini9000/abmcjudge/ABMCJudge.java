@@ -24,20 +24,17 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
     private static final HashMap<Player, PlayerMenuUtil> playerMenuUtilMap = new HashMap<>();
 
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage("Enabling abmcjudge!");
-        Bukkit.getConsoleSender().sendMessage("Version: 2.4.8");
+        Bukkit.getConsoleSender().sendMessage("Enabling ABMCJudge!");
+        Bukkit.getConsoleSender().sendMessage("Version: " + getPluginMeta().getVersion());
         getConfig().options().copyDefaults();
         saveDefaultConfig();
-//        getCommand("submit").setExecutor(new SubmitCommand());
-//        getCommand("mkjudge").setExecutor(new MakeJudge());
-//        getCommand("judge").setExecutor(new JudgeCommand());
-        new MakeJudge(this);
         new SubmitCommand(this);
         new JudgeCommand(this);
         new SetPlotTitle(this);
         new SetPlotLore(this);
         new SetPlotComment(this);
         new MenuListener(this);
+        this.luckPerms = (LuckPerms)getServer().getServicesManager().load(LuckPerms.class);
         new LPUtils(this.luckPerms);
         this.SQL = new MySQL();
         this.data = new SQLCreate(this);

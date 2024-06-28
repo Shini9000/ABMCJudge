@@ -4,3 +4,6 @@ port: '3306' # use 3308 if not working
 database: 'ABMC Judge Submissions' #automatically created if it does not exist
 user: 'root'
 password: ''
+
+console:
+  error: "This command can only be ran by a player!"
