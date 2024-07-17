@@ -20,7 +20,7 @@ public class SQLCreate {
         try {
             PreparedStatement ps = this.plugin.SQL.getConnection().prepareStatement("CREATE TABLE IF NOT EXISTS plotsubmit (NAME VARCHAR(100),UUID VARCHAR(100),PLOTID VARCHAR(100),PLOTTITLE VARCHAR(100),PLOTLORE VARCHAR(6000),STATUS VARCHAR(50),COMMENT VARCHAR(6000),PRIMARY KEY(PLOTID))");
             ps.executeUpdate();
-            Bukkit.getConsoleSender().sendMessage("[kSJudge table created]");
+            Bukkit.getConsoleSender().sendMessage("[ABMCJudge table created]");
         } catch (SQLException e) {
             e.printStackTrace();
         }
