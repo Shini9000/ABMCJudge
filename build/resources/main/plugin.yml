@@ -1,5 +1,5 @@
 name: ABMCJudge
-version: '${version}'
+version: '1.2'
 main: me.shini9000.abmc.ABMCJudge
 api-version: '1.21'
 load: STARTUP
