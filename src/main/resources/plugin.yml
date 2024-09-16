@@ -1,0 +1,8 @@
+name: ABMCJudge
+version: '1.0'
+main: me.shini9000.ABMCJudge
+api-version: '1.21'
+load: STARTUP
+authors: [ Shini9000 ]
+description: Judge plugin good
+website: https://github.com/Shini9000
