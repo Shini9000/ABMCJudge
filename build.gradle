@@ -3,10 +3,11 @@ plugins {
 }
 
 group = 'me.shini9000.abmcjudge'
-version = '1.4'
+version = '1.6'
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
     maven {
         name = "spigotmc-repo"
         url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
