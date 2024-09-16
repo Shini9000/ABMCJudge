@@ -1,10 +1,11 @@
 name: ABMCJudge
-version: '1.2'
-main: me.shini9000.abmc.ABMCJudge
+version: '1.4'
+main: me.shini9000.abmcjudge.ABMCJudge
 api-version: '1.21'
 load: STARTUP
 authors: [ Shini9000, DEPR(Koro,Shini9000) ]
 description: Judge plugin good
+depend: [PlotSquared]
 website: https://github.com/Shini9000
 commands:
   # submit / judge / plotlore / plotcomment / plotinfo / plottitle / plotaccept / plotdeny / plotrankup
