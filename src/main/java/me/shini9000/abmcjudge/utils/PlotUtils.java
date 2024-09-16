@@ -27,7 +27,7 @@ public class PlotUtils {
         PlotPlayer p = BukkitUtil.adapt(player);
         Plot plot = p.getCurrentPlot();
 
-        if (id == null) return ChatColor.RED + "You must be in your plot!";
+        if (id == null) return ChatColor.RED + "You must be in a plot!";
         if (plot.isOwner(p.getUUID())){
             return "Plot ID: " + id.toString();
         } else {

@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'me.shini9000.abmcjudge'
-version = '1.7'
+version = '1.8 sql update'
 
 repositories {
     mavenCentral()
