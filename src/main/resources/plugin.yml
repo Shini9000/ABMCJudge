@@ -1,8 +1,54 @@
 name: ABMCJudge
-version: '1.0'
+version: '${version}'
 main: me.shini9000.ABMCJudge
 api-version: '1.21'
 load: STARTUP
 authors: [ Shini9000 ]
 description: Judge plugin good
 website: https://github.com/Shini9000
+commands:
+  # submit / judge / plotlore / plotcomment / plotinfo / plottitle / plotaccept / plotdeny / plotrankup
+  Submit:
+    description: Open the initial submit menu for players
+    usage: /submit
+    permission: abmcjudge.command.submit
+  Judge:
+    description: Open the initial judge menu for judges
+    usage: /judge
+    permission: abmcjudge.command.judge
+  plotlore:
+    aliases:
+      - plore
+    description: Edit or Add lore to a submitted plot
+    usage: /plotlore <edit|add> <text>
+    permission: abmcjudge.command.plotlore
+  plotcomment:
+    aliases:
+      - pcomment
+    description: Edit or Add a comment to a submitted plot
+    usage: /plotcomment <edit|add> <text>
+    permission: abmcjudge.command.plotcomment
+  plotinfo:
+    aliases:
+      - pinfo
+    description: Return info about plot including comment and lore and submitted rank
+    usage: /plotinfo
+    permission: abmcjudge.command.plotinfo
+  plottitle:
+    aliases:
+      - ptitle
+    description: Add a title to the submitting plot
+    usage: /plottitle <add> <text>
+    permission: abmcjudge.command.plottitle
+  plotaccept:
+    description: Admin override for accepting a submitted plots
+    usage: /plotaccept <abmcplotID>
+    permission: abmcjudge.admin.plotaccept
+  plotdeny:
+    description: Admin override for denying a submitted plots
+    usage: /plotdeny <abmcplotID>
+    permission: abmcjudge.admin.plotdeny
+  plotrankup:
+    description: Ranks up the player on the track of judge
+    usage: /plotrankup <playerName>
+    permission: abmcjudge.admin.plotrankup
