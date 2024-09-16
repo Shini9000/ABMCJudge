@@ -52,6 +52,7 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
             SQL.openConnection();
         } catch (ClassNotFoundException | SQLException e) {
             Bukkit.getLogger().info("Database not connected.");
+            e.printStackTrace();
         }
 
         try {

@@ -1,5 +1,5 @@
 name: ABMCJudge
-version: '1.8 sql update'
+version: '1.9 sql catch print'
 main: me.shini9000.abmcjudge.ABMCJudge
 api-version: '1.21'
 load: STARTUP
