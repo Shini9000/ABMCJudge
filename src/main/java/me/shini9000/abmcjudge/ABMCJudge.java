@@ -17,6 +17,8 @@ import java.util.HashMap;
 
 public final class ABMCJudge extends JavaPlugin implements Listener {
 
+    private static ABMCJudge plugin;
+
     public SQLCreate data;
     public MySQL SQL;
     public LuckPerms luckPerms;
@@ -37,7 +39,6 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
         new SetPlotTitle(this);
         new SetPlotLore(this);
         new SetPlotComment(this);
-        new MenuListener(this);
 
         // Load an instance of 'LuckPerms' using the services manager.
         this.luckPerms = getServer().getServicesManager().load(LuckPerms.class);
@@ -93,6 +94,9 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
         } else {
             return playerMenuUtilsMap.get(p); //Return the object by using the provided player
         }
+    }
+    public static ABMCJudge getPlugin() {
+        return plugin;
     }
 
 }

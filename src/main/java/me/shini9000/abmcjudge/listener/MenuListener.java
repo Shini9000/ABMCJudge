@@ -9,12 +9,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.InventoryHolder;
 
 public class MenuListener implements Listener {
-    private ABMCJudge plugin;
-
-    public MenuListener(ABMCJudge plugin){
-        this.plugin = plugin;
-        Bukkit.getPluginManager().registerEvents(this, plugin);
-    }
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
