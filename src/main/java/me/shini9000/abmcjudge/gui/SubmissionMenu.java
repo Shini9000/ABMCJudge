@@ -57,6 +57,7 @@ public class SubmissionMenu extends Menu {
 
     @Override
     public void setMenuItems() {
+        //Possible change to show status color rather than block / lore status
         inventory.setItem(3, utils.createGuiItem(Material.GREEN_CONCRETE,
                 ChatColor.DARK_GREEN + "Submit Plot", 1,
                 ChatColor.GOLD + "Are you sure you want to submit this plot?"));

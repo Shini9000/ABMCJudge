@@ -35,22 +35,24 @@ public class PlotOverviewMenu extends Menu {
         if (e.getCurrentItem() == null) return;
 
         switch (e.getCurrentItem().getType()){
-            case WRITABLE_BOOK -> {
+            case Material.WRITABLE_BOOK -> {
                 new PlayerPlotsMenu(playerMenuUtils).open();
                 break;
             }
-            case PAPER -> {
+            case Material.PAPER -> {
                 if(PlotUtils.getId(p) != null){ new PlotInfo(playerMenuUtils).open();}
                 else p.sendMessage( ChatColor.RED + "This is not your plot");
                 break;
             }
-            case GREEN_CONCRETE -> {
+            case Material.GREEN_CONCRETE -> {
                 if(PlotUtils.getId(p) != null){
                     new SubmissionMenu(playerMenuUtils).open();
                 }
                 else p.sendMessage( ChatColor.RED + "This is not your plot");
                 break;
+
             }
+
         }
 
         e.setCancelled(true);
@@ -59,6 +61,8 @@ public class PlotOverviewMenu extends Menu {
     @Override
     public void setMenuItems() {
         inventory.setItem(0, utils.getHead(playerMenuUtils.getOwner()));
+        inventory.setItem(2, utils.createGuiItem(Material.ENCHANTED_BOOK,
+                ChatColor.LIGHT_PURPLE + "All submitted plots *debug*", 1));
         inventory.setItem(3, utils.createGuiItem(Material.WRITABLE_BOOK,
                 ChatColor.YELLOW + "List of your submitted plots", 1));
         if(PlotUtils.getId(playerMenuUtils.getOwner()) != null){

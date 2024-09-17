@@ -4,6 +4,7 @@ import me.shini9000.abmcjudge.ABMCJudge;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -48,7 +49,7 @@ public class Utils {
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
 
         meta.setOwningPlayer(p);
-        meta.setDisplayName(p.getName());
+        meta.setDisplayName(p.getName().replaceFirst("", ChatColor.GREEN + ""));
 
         String plotStatus = sqlUtils.getPlotStatus(sqlUtils.getPlotID(p));
         String playerGroup = lpUtils.getPlayerGroup(p);

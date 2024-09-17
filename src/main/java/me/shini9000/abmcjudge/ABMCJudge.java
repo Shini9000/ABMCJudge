@@ -39,6 +39,7 @@ public final class ABMCJudge extends JavaPlugin implements Listener {
         new SetPlotTitle(this);
         new SetPlotLore(this);
         new SetPlotComment(this);
+        new MenuListener(this);
 
         // Load an instance of 'LuckPerms' using the services manager.
         this.luckPerms = getServer().getServicesManager().load(LuckPerms.class);
