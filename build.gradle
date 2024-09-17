@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'me.shini9000.abmcjudge'
-version = '1.9 sql catch print'
+version = '1.10'
 
 repositories {
     mavenCentral()

@@ -37,10 +37,13 @@ public class MySQL {
     }
 
     public Connection openConnection() throws SQLException, ClassNotFoundException {
-        if (checkConnection()) {
-            return this.connection;
-
-        }
+        try{
+            if (checkConnection()) {
+                return this.connection;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+    }
         return forceConnection();
     }
 

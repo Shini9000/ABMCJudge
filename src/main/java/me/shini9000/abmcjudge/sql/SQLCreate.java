@@ -20,7 +20,7 @@ public class SQLCreate {
         PreparedStatement ps;
         try{
             ps = plugin.SQL.getConnection().prepareStatement(
-                    "CREATE TABLE IF NOT EXISTS plotsubmit"
+                    "CREATE TABLE IF NOT EXISTS plotsubmit "
                             + "(NAME VARCHAR(100),UUID VARCHAR(100),PLOTID VARCHAR(100),PLOTTITLE VARCHAR(100),PLOTLORE VARCHAR(6000),"
                             + "STATUS VARCHAR(50),COMMENT VARCHAR(6000),PRIMARY KEY(PLOTID))");
             ps.executeUpdate();
@@ -39,7 +39,7 @@ public class SQLCreate {
             UUID uuid = UUID.nameUUIDFromBytes(id.getBytes());
             if (!exists(uuid)){
                 PreparedStatement ps2 = plugin.SQL.getConnection().prepareStatement(
-                        "INSERT IGNORE INTO plotsubmit" + "(NAME,UUID,PLOTID,PLOTTITLE,PLOTLORE,STATUS,COMMENT) VALUES (?,?,?,?,?,?,?)");
+                        "INSERT IGNORE INTO plotsubmit " + "(NAME,UUID,PLOTID,PLOTTITLE,PLOTLORE,STATUS,COMMENT) VALUES (?,?,?,?,?,?,?)");
                 ps2.setString(1,player.getName());
                 ps2.setString(2, uuid.toString());
                 ps2.setString(3, id);
