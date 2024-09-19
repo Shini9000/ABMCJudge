@@ -1,10 +1,14 @@
 package me.shini9000.abmcjudge.utils;
 
 import net.luckperms.api.LuckPerms;
+import net.luckperms.api.cacheddata.CachedMetaData;
+import net.luckperms.api.cacheddata.CachedPermissionData;
 import net.luckperms.api.model.group.Group;
 import net.luckperms.api.model.user.User;
 import net.luckperms.api.model.user.UserManager;
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -65,7 +69,7 @@ public class LPUtils {
     }
 
     public List<String> creativeGroups(){
-        List<String> creativeGroupsList = Arrays.asList("novice", "disciple", "mentor", "guru", "expert", "master");
+        List<String> creativeGroupsList = Arrays.asList("default", "novice", "disciple", "mentor", "guru", "expert", "master");
         return creativeGroupsList;
     }
 }
